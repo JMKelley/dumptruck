@@ -1,0 +1,65 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Delete Entries plugin for Craft CMS 3.x
+ *
+ * Delete Entries Settings.twig
+ *
+ * @author    Jonathan Kelley
+ * @copyright Copyright (c) 2020 Jonathan Kelley
+ * @link      http://www.vouchertoday.uk/
+ * @package   DeleteEntries
+ * @since     1.0.0
+ */
+#}
+{% import "_includes/forms" as forms %}
+
+
+{{ craft.app.session.getFlash('notice') }}
+
+{% if craft.app.session.hasFlash('message') %}
+	{{ craft.app.session.getFlash('message') }}
+{% endif %}
+
+{% do view.registerAssetBundle("jonathan\\deleteentries\\assetbundles\\deleteentries\\DeleteEntriesAsset") %}
+
+{{ forms.selectField({
+	label: 'Time Elapsed'|t('deleteentries'),
+	instructions: '',
+	id: 'timeElapsed',
+	name: 'timeElapsed',
+	options: {
+		'1': '1 Day'|t('deleteentries'),
+		'2': '2 Days'|t('deleteentries'),
+		'3': '3 Days'|t('deleteentries'),
+		'4': '4 Days'|t('deleteentries'),
+		'5': '5 Days'|t('deleteentries'),
+		'6': '6 Days'|t('deleteentries'),
+		'7': '7 Days'|t('deleteentries'),
+		'8': '8 Days'|t('deleteentries'),
+		'9': '9 Days'|t('deleteentries'),
+		'10': '10 Days'|t('deleteentries'),
+	},
+	value: settings.timeElapsed,
+}) }}
+
+{% set sectionsArr = [] %}
+{% for section in craft.app.sections.allSections() %}
+	{% if section.type == 'channel' or section.type == 'structure' %}
+		{% set sectionsArr = sectionsArr|merge([{value: section.id, label: section.name}]) %}
+	{% endif %}
+{% endfor %}
+
+{{ forms.checkboxSelectField({
+	label: 'Channels'|t('deleteentries'),
+	instructions: '',
+	id: 'channels',
+	name: 'channels',
+	options: sectionsArr,
+	values: settings.channels,
+	warning: false
+}) }}
+<div class="btnSettings field">
+	<div id="btnSaveSettings"><button type="submit" class="btn submit">Save Settings</button></div>
+	<div id="btnDeleteEntries"><a href="{{ url('delete-expried-entries') }}" class="btn submit delete icon">Delete Entries</a></div>
+</div>

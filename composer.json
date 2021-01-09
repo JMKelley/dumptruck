@@ -1,0 +1,44 @@
+{
+    "name": "jonathan/delete-entries",
+    "description": "This plugin automatically deletes entries when a set time has elapsed from a date/time field.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "delete entries"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Kelley",
+            "homepage": "http://www.vouchertoday.uk/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "jonathan\\deleteentries\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Delete Entries",
+        "handle": "delete-entries",
+        "developer": "Jonathan Kelley",
+        "developerUrl": "http://www.vouchertoday.uk/",
+        "documentationUrl": "???",
+        "changelogUrl": "???",
+        "components": {
+            "deleteEntries": "jonathan\\deleteentries\\services\\DeleteEntries"
+        },
+        "class": "jonathan\\deleteentries\\DeleteEntries"
+    }
+}

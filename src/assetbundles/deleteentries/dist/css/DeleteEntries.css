@@ -1,0 +1,22 @@
+/**
+ * Delete Entries plugin for Craft CMS
+ *
+ * Delete Entries CSS
+ *
+ * @author    Jonathan Kelley
+ * @copyright Copyright (c) 2020 Jonathan Kelley
+ * @link      http://www.vouchertoday.uk/
+ * @package   DeleteEntries
+ * @since     1.0.0
+ */
+.btnSettings{
+	display: block;
+	width: 100%;
+	clear: both;
+}
+#settings-btnDeleteEntries {
+	text-align: right;
+}
+#header #action-button{
+	display: none;
+}
