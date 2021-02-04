@@ -22,11 +22,11 @@ To install the plugin, follow these instructions.
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Delete Entries.
 
-## Delete Entries Overview
+## Dump Truck Overview
 
 This plugin can be used to delete expired entries of sections (Channel and Structure)
 
-## Configuring Delete Entries
+## Configuring Dump Truck
 
 Go to settings of plugin and set:
 **Time Elapsed** Number of days after expired entries will be deleted.
@@ -34,7 +34,7 @@ Go to settings of plugin and set:
 
 The process of deleting exprired entried can be scheduled with Craft Job by running 
 ```
-php craft delete-entries/delete-entries
+php craft dumptruck/delete-entries
 ```
 
 * Release it

@@ -1,9 +1,9 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 {#
 /**
- * Delete Entries plugin for Craft CMS 3.x
+ * Dump Truck plugin for Craft CMS 3.x
  *
- * Delete Entries Settings.twig
+ * Dump Truck Settings.twig
  *
  * @author    Jonathan Kelley
  * @copyright Copyright (c) 2020 Jonathan Kelley
@@ -21,24 +21,24 @@
 	{{ craft.app.session.getFlash('message') }}
 {% endif %}
 
-{% do view.registerAssetBundle("jonathan\\deleteentries\\assetbundles\\deleteentries\\DeleteEntriesAsset") %}
+{% do view.registerAssetBundle("jmkelley\\dumptruck\\assetbundles\\deleteentries\\DeleteEntriesAsset") %}
 
 {{ forms.selectField({
-	label: 'Time Elapsed'|t('deleteentries'),
+	label: 'Time Elapsed'|t('dumptruck'),
 	instructions: '',
 	id: 'timeElapsed',
 	name: 'timeElapsed',
 	options: {
-		'1': '1 Day'|t('deleteentries'),
-		'2': '2 Days'|t('deleteentries'),
-		'3': '3 Days'|t('deleteentries'),
-		'4': '4 Days'|t('deleteentries'),
-		'5': '5 Days'|t('deleteentries'),
-		'6': '6 Days'|t('deleteentries'),
-		'7': '7 Days'|t('deleteentries'),
-		'8': '8 Days'|t('deleteentries'),
-		'9': '9 Days'|t('deleteentries'),
-		'10': '10 Days'|t('deleteentries'),
+		'1': '1 Day'|t('dumptruck'),
+		'2': '2 Days'|t('dumptruck'),
+		'3': '3 Days'|t('dumptruck'),
+		'4': '4 Days'|t('dumptruck'),
+		'5': '5 Days'|t('dumptruck'),
+		'6': '6 Days'|t('dumptruck'),
+		'7': '7 Days'|t('dumptruck'),
+		'8': '8 Days'|t('dumptruck'),
+		'9': '9 Days'|t('dumptruck'),
+		'10': '10 Days'|t('dumptruck'),
 	},
 	value: settings.timeElapsed,
 }) }}
@@ -51,7 +51,7 @@
 {% endfor %}
 
 {{ forms.checkboxSelectField({
-	label: 'Channels'|t('deleteentries'),
+	label: 'Channels'|t('dumptruck'),
 	instructions: '',
 	id: 'channels',
 	name: 'channels',

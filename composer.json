@@ -1,5 +1,5 @@
 {
-    "name": "jonathan/delete-entries",
+    "name": "jmkelley/dumptruck",
     "description": "This plugin automatically deletes entries when a set time has elapsed from a date/time field.",
     "type": "craft-plugin",
     "version": "1.0.0",
@@ -8,7 +8,7 @@
         "cms",
         "craftcms",
         "craft-plugin",
-        "delete entries"
+        "dump truck"
     ],
     "support": {
         "docs": "???",
@@ -26,19 +26,19 @@
     },
     "autoload": {
         "psr-4": {
-          "jonathan\\deleteentries\\": "src/"
+          "jmkelley\\dumptruck\\": "src/"
         }
     },
     "extra": {
-        "name": "Delete Entries",
+        "name": "Dump Truck",
         "handle": "delete-entries",
         "developer": "Jonathan Kelley",
         "developerUrl": "http://www.vouchertoday.uk/",
         "documentationUrl": "???",
         "changelogUrl": "???",
         "components": {
-            "deleteEntries": "jonathan\\deleteentries\\services\\DeleteEntries"
+            "deleteEntries": "jmkelley\\dumptruck\\services\\DeleteEntries"
         },
-        "class": "jonathan\\deleteentries\\DeleteEntries"
+        "class": "jmkelley\\dumptruck\\DeleteEntries"
     }
 }

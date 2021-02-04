@@ -1,6 +1,6 @@
 <?php
 /**
- * Delete Entries plugin for Craft CMS 3.x
+ * Dump Truck plugin for Craft CMS 3.x
  *
  * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
  *
@@ -8,10 +8,10 @@
  * @copyright Copyright (c) 2020 Jonathan Kelley
  */
 
-namespace jonathan\deleteentries;
+namespace jmkelley\dumptruck;
 
-use jonathan\deleteentries\services\DeleteEntries as DeleteEntriesService;
-use jonathan\deleteentries\models\Settings;
+use jmkelley\dumptruck\services\DeleteEntries as DeleteEntriesService;
+use jmkelley\dumptruck\models\Settings;
 
 use Craft;
 use craft\base\Plugin;
@@ -103,7 +103,7 @@ class DeleteEntries extends Plugin
 
         // Add in our console commands
         if (Craft::$app instanceof ConsoleApplication) {
-            $this->controllerNamespace = 'jonathan\deleteentries\console\controllers';
+            $this->controllerNamespace = 'jmkelley\dumptruck\console\controllers';
         }
 
         // Register our site routes
@@ -131,7 +131,7 @@ class DeleteEntries extends Plugin
             function(RegisterCpNavItemsEvent $event) {
                 $event->navItems[] = [
                     'url' => 'settings/plugins/delete-entries',
-                    'label' => \Craft::t('app', 'Delete Entries'),
+                    'label' => \Craft::t('app', 'Dump Truck'),
                     'fontIcon' => 'trash',
                     'id' => 'nav-delete-entries'
                 ];

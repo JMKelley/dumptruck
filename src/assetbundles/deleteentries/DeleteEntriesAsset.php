@@ -1,6 +1,6 @@
 <?php
 /**
- * Delete Entries plugin for Craft CMS 3.x
+ * Dump Truck plugin for Craft CMS 3.x
  *
  * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
  *
@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2020 Jonathan Kelley
  */
 
-namespace jonathan\deleteentries\assetbundles\deleteentries;
+namespace jmkelley\dumptruck\assetbundles\deleteentries;
 
 use Craft;
 use craft\web\AssetBundle;
@@ -43,7 +43,7 @@ class DeleteEntriesAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@jonathan/deleteentries/assetbundles/deleteentries/dist";
+        $this->sourcePath = "@jmkelley/dumptruck/assetbundles/deleteentries/dist";
 
         // define the dependencies
         $this->depends = [

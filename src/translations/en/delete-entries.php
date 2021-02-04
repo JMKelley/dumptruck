@@ -1,6 +1,6 @@
 <?php
 /**
- * Delete Entries plugin for Craft CMS 3.x
+ * Dump Truck plugin for Craft CMS 3.x
  *
  * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
  *
@@ -9,7 +9,7 @@
  */
 
 /**
- * Delete Entries en Translation
+ * Dump Truck en Translation
  *
  * Returns an array with the string to be translated (as passed to `Craft::t('delete-entries', '...')`) as
  * the key, and the translation as the value.
@@ -21,5 +21,5 @@
  * @since     1.0.0
  */
 return [
-    'Delete Entries plugin loaded' => 'Delete Entries plugin loaded',
+    'Dump Truck plugin loaded' => 'Dump Truck plugin loaded',
 ];

@@ -1,6 +1,6 @@
 <?php
 /**
- * Delete Entries plugin for Craft CMS 3.x
+ * Dump Truck plugin for Craft CMS 3.x
  *
  * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
  *
@@ -9,9 +9,9 @@
  */
 
 /**
- * Delete Entries config.php
+ * Dump Truck config.php
  *
- * This file exists only as a template for the Delete Entries settings.
+ * This file exists only as a template for the Dump Truck settings.
  * It does nothing on its own.
  *
  * Don't edit this file, instead copy it to 'craft/config' as 'delete-entries.php'

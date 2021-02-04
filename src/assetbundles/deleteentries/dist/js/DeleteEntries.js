@@ -1,7 +1,7 @@
 /**
- * Delete Entries plugin for Craft CMS
+ * Dump Truck plugin for Craft CMS
  *
- * Delete Entries JS
+ * Dump Truck JS
  *
  * @author    Jonathan Kelley
  * @copyright Copyright (c) 2020 Jonathan Kelley
