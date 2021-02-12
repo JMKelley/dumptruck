@@ -1,34 +1,27 @@
 <?php
 /**
- * Dump Truck plugin for Craft CMS 3.x
- *
- * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
- *
  * @link      http://www.vouchertoday.uk/
- * @copyright Copyright (c) 2020 Jonathan Kelley
+ * @copyright Copyright (c) 2021 Jonathan Kelley
  */
 
 namespace jmkelley\dumptruck\console\controllers;
 
-use jmkelley\dumptruck\DeleteEntries as DeleteEntriesPlugin;
+use jmkelley\dumptruck\DumpTruck as DumpTruckPlugin;
 
 use Craft;
 use yii\console\Controller;
 use yii\helpers\Console;
-use jmkelley\dumptruck\jobs\DeleteEntries as DeleteEntriesJob;
 
-/**
- * @author    Jonathan Kelley
- * @package   DeleteEntries
- * @since     1.0.0
- */
-class DeleteEntriesController extends Controller
+use jmkelley\dumptruck\jobs\Dumpentries as DumpentriesJob;
+
+class DumpController extends Controller
 {
-    public function actionIndex()
+    // php craft dump-truck/dump/entries
+    public function actionEntries()
     {
         $result = '';
 
-        $pluginSettings = DeleteEntriesPlugin::$plugin->getSettings();
+        $pluginSettings = DumpTruckPlugin::$plugin->getSettings();
         $timeElapsed = $pluginSettings->timeElapsed;
         $channels = $pluginSettings->channels;
 
@@ -41,8 +34,8 @@ class DeleteEntriesController extends Controller
         if( $entriesCount )
         {
             $queue = Craft::$app->getQueue();
-            $jobId = $queue->push(new DeleteEntriesJob([
-                'description' => Craft::t('delete-entries', 'Deleting expired entries expired before ' . $timeElapsed . ' day(s).')
+            $jobId = $queue->push(new DumpentriesJob([
+                'description' => Craft::t('dump-truck', 'Deleting expired entries expired before ' . $timeElapsed . ' day(s).')
             ]));
         }
 

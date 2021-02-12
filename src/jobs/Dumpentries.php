@@ -2,33 +2,24 @@
 /**
  * Dump Truck plugin for Craft CMS 3.x
  *
- * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
+ * Delete Expired Entries plugin for Craft CMS 3.x
  *
  * @link      http://www.vouchertoday.uk/
- * @copyright Copyright (c) 2020 Jonathan Kelley
+ * @copyright Copyright (c) 2021 Jonathan Kelley
  */
 
 namespace jmkelley\dumptruck\jobs;
 
-use jmkelley\dumptruck\DeleteEntries as DeleteEntriesPlugin;
+use jmkelley\dumptruck\DumpTruck as DumpTruckPlugin;
 
 use Craft;
 use craft\queue\BaseJob;
 
-/**
- * DeleteEntries job
- *
- *
- * @author    Jonathan Kelley
- * @package   DeleteEntries
- * @since     1.0.0
- */
-class DeleteEntries extends BaseJob
+class Dumpentries extends BaseJob
 {
-
     public function execute($queue)
     {
-        $pluginSettings = DeleteEntriesPlugin::$plugin->getSettings();
+        $pluginSettings = DumpTruckPlugin::$plugin->getSettings();
         $timeElapsed = $pluginSettings->timeElapsed;
         $channels = $pluginSettings->channels;
 
@@ -45,7 +36,6 @@ class DeleteEntries extends BaseJob
 
     protected function defaultDescription(): string
     {
-        return Craft::t('delete-entries', 'DeleteEntries');
+        return Craft::t('dumptruck', 'Delete Expired Entries');
     }
-
 }

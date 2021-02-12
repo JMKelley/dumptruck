@@ -2,10 +2,10 @@
 /**
  * Dump Truck plugin for Craft CMS 3.x
  *
- * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
+ * Delete Expired Entries plugin for Craft CMS 3.x
  *
  * @link      http://www.vouchertoday.uk/
- * @copyright Copyright (c) 2020 Jonathan Kelley
+ * @copyright Copyright (c) 2021 Jonathan Kelley
  */
 
 /**
@@ -14,7 +14,7 @@
  * This file exists only as a template for the Dump Truck settings.
  * It does nothing on its own.
  *
- * Don't edit this file, instead copy it to 'craft/config' as 'delete-entries.php'
+ * Don't edit this file, instead copy it to 'craft/config' as 'dump-truck.php'
  * and make your changes there to override default settings.
  *
  * Once copied to 'craft/config', this file will be multi-environment aware as

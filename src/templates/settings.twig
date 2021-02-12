@@ -1,17 +1,3 @@
-{# @var craft \craft\web\twig\variables\CraftVariable #}
-{#
-/**
- * Dump Truck plugin for Craft CMS 3.x
- *
- * Dump Truck Settings.twig
- *
- * @author    Jonathan Kelley
- * @copyright Copyright (c) 2020 Jonathan Kelley
- * @link      http://www.vouchertoday.uk/
- * @package   DeleteEntries
- * @since     1.0.0
- */
-#}
 {% import "_includes/forms" as forms %}
 
 
@@ -21,7 +7,7 @@
 	{{ craft.app.session.getFlash('message') }}
 {% endif %}
 
-{% do view.registerAssetBundle("jmkelley\\dumptruck\\assetbundles\\deleteentries\\DeleteEntriesAsset") %}
+{% do view.registerAssetBundle("jmkelley\\dumptruck\\assetbundles\\dumptruck\\DumpTruckAsset") %}
 
 {{ forms.selectField({
 	label: 'Time Elapsed'|t('dumptruck'),
@@ -51,7 +37,7 @@
 {% endfor %}
 
 {{ forms.checkboxSelectField({
-	label: 'Channels'|t('dumptruck'),
+	label: 'Sections'|t('dumptruck'),
 	instructions: '',
 	id: 'channels',
 	name: 'channels',
@@ -61,5 +47,5 @@
 }) }}
 <div class="btnSettings field">
 	<div id="btnSaveSettings"><button type="submit" class="btn submit">Save Settings</button></div>
-	<div id="btnDeleteEntries"><a href="{{ url('delete-expried-entries') }}" class="btn submit delete icon">Delete Entries</a></div>
+	<div id="btnDeleteEntries"><a href="{{ url('actions/dump-truck/dump') }}" class="btn submit delete icon">Delete Entries</a></div>
 </div>

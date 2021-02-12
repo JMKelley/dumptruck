@@ -2,20 +2,20 @@
 /**
  * Dump Truck plugin for Craft CMS 3.x
  *
- * This plugin automatically deletes entries when a set time has elapsed from a date/time field.
+ * Delete Expired Entries plugin for Craft CMS 3.x
  *
  * @link      http://www.vouchertoday.uk/
- * @copyright Copyright (c) 2020 Jonathan Kelley
+ * @copyright Copyright (c) 2021 Jonathan Kelley
  */
 
-namespace jmkelley\dumptruck\assetbundles\deleteentries;
+namespace jmkelley\dumptruck\assetbundles\indexcpsection;
 
 use Craft;
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
 
 /**
- * DeleteEntriesAsset AssetBundle
+ * IndexCPSectionAsset AssetBundle
  *
  * AssetBundle represents a collection of asset files, such as CSS, JS, images.
  *
@@ -29,10 +29,10 @@ use craft\web\assets\cp\CpAsset;
  * http://www.yiiframework.com/doc-2.0/guide-structure-assets.html
  *
  * @author    Jonathan Kelley
- * @package   DeleteEntries
+ * @package   DumpTruck
  * @since     1.0.0
  */
-class DeleteEntriesAsset extends AssetBundle
+class IndexCPSectionAsset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -43,7 +43,7 @@ class DeleteEntriesAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@jmkelley/dumptruck/assetbundles/deleteentries/dist";
+        $this->sourcePath = "@jmkelley/dumptruck/assetbundles/indexcpsection/dist";
 
         // define the dependencies
         $this->depends = [
@@ -53,11 +53,11 @@ class DeleteEntriesAsset extends AssetBundle
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
         $this->js = [
-            'js/DeleteEntries.js',
+            'js/Index.js',
         ];
 
         $this->css = [
-            'css/DeleteEntries.css',
+            'css/Index.css',
         ];
 
         parent::init();

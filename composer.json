@@ -1,6 +1,6 @@
 {
-    "name": "jmkelley/dumptruck",
-    "description": "This plugin automatically deletes entries when a set time has elapsed from a date/time field.",
+    "name": "jmkelley/dump-truck",
+    "description": "Delete Expired Entries plugin for Craft CMS 3.x",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
@@ -11,8 +11,8 @@
         "dump truck"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/dumptruck/dump-truck/blob/master/README.md",
+        "issues": "https://github.com/dumptruck/dump-truck/issues"
     },
     "license": "MIT",
     "authors": [
@@ -31,14 +31,11 @@
     },
     "extra": {
         "name": "Dump Truck",
-        "handle": "delete-entries",
+        "handle": "dump-truck",
         "developer": "Jonathan Kelley",
         "developerUrl": "http://www.vouchertoday.uk/",
-        "documentationUrl": "???",
-        "changelogUrl": "???",
-        "components": {
-            "deleteEntries": "jmkelley\\dumptruck\\services\\DeleteEntries"
-        },
-        "class": "jmkelley\\dumptruck\\DeleteEntries"
+        "documentationUrl": "https://github.com/dumptruck/dump-truck/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/dumptruck/dump-truck/master/CHANGELOG.md",
+        "class": "jmkelley\\dumptruck\\DumpTruck"
     }
 }
