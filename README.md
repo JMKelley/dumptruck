@@ -16,7 +16,11 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
+<<<<<<< HEAD
         composer require jmkelley/dumptruck
+=======
+        composer require dumptruck/delete-entries
+>>>>>>> d71f66b195411b04507c9de9f6d8471cb18e0f5f
 
 3. In the Control Panel, go to Settings → Plugins and click the “Install” button for Delete Entries.
 

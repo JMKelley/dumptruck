@@ -6,4 +6,5 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 1.0.0 - 2021-02-11
 ### Added
-- Initial release
+- Initial Release.
+- Added to Plugin Store.
